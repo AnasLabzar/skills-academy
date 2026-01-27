@@ -64,6 +64,7 @@
             --input-bg: #334155;
         }
 
+        /* --- GLOBAL STYLES --- */
         body {
             font-family: 'Outfit', sans-serif;
             background-color: var(--bg-body);
@@ -125,48 +126,7 @@
             width: 100%;
         }
 
-        /* --- ZID HADCHI F LLEKHER DYAL STYLE --- */
-
-        /* MODERN GLASS FORM STYLES */
-        .hero-form-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 24px;
-            padding: 35px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-form-card h4 {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-        }
-
-        .hero-input {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            border-radius: 12px;
-            padding: 14px 18px;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-            transition: all 0.3s;
-        }
-
-        .hero-input:focus {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: var(--accent-color);
-            color: white;
-            outline: none;
-            box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.1);
-        }
-
-        .hero-input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
+        /* --- BUTTONS --- */
         .btn-primary-custom {
             background: var(--accent-color);
             color: white !important;
@@ -288,7 +248,47 @@
             }
         }
 
-        /* --- SECTIONS --- */
+        /* --- MODERN GLASS FORM STYLES --- */
+        .hero-form-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-form-card h4 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 12px;
+            padding: 14px 18px;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+
+        .hero-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-color);
+            color: white;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.1);
+        }
+
+        .hero-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* --- SECTIONS BACKGROUNDS --- */
         .bg-section {
             background-color: var(--bg-section);
         }
@@ -297,6 +297,7 @@
             background-color: var(--bg-body);
         }
 
+        /* --- FEATURE CARDS --- */
         .feature-card {
             background: var(--bg-card);
             padding: 40px 30px;
@@ -304,6 +305,8 @@
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
             height: 100%;
+            position: relative;
+            overflow: hidden;
         }
 
         .feature-card:hover {
@@ -331,7 +334,7 @@
             color: white;
         }
 
-        /* --- VIDEO & STEPS --- */
+        /* --- METHODOLOGY SECTION --- */
         .video-wrapper {
             position: relative;
             border-radius: 24px;
@@ -378,6 +381,7 @@
             }
         }
 
+        /* --- TIMELINE PROCESS --- */
         .step-item {
             position: relative;
             z-index: 1;
@@ -453,7 +457,7 @@
             padding: 15px 20px;
         }
 
-        /* --- OTHERS --- */
+        /* --- INSTRUCTOR CARD --- */
         .instructor-card {
             background: var(--bg-card);
             border-radius: 30px;
@@ -462,6 +466,7 @@
             border: 1px solid var(--border-color);
         }
 
+        /* --- TESTIMONIALS --- */
         .testimonial-card {
             background: var(--bg-card);
             padding: 30px;
@@ -478,6 +483,7 @@
             color: #fbbf24;
         }
 
+        /* --- CONTACT FORM & INPUTS --- */
         .form-control,
         .form-select {
             background-color: var(--bg-input);
@@ -487,24 +493,40 @@
             border-radius: 12px;
         }
 
-        .form-control:focus {
+        .form-control:focus,
+        .form-select:focus {
+            background-color: var(--bg-input);
             border-color: var(--accent-color);
+            color: var(--text-heading);
             box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.1);
         }
 
+        .form-control::placeholder {
+            color: var(--text-body);
+            opacity: 0.6;
+        }
+
+        /* --- FOOTER --- */
         .footer {
             background: #020617;
             color: #94a3b8;
             padding-top: 80px;
             position: relative;
+            overflow: hidden;
         }
 
         .footer h4 {
             color: #ffffff;
         }
 
+        .footer a {
+            color: #94a3b8;
+            transition: 0.3s;
+        }
+
         .footer a:hover {
             color: var(--accent-color);
+            padding-left: 5px;
         }
 
         .newsletter-input {
@@ -512,6 +534,12 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
             border-radius: 50px 0 0 50px;
+        }
+
+        .newsletter-input:focus {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-color: var(--accent-color);
         }
 
         .btn-newsletter {
@@ -522,6 +550,7 @@
             padding: 0 25px;
         }
 
+        /* --- UTILITIES --- */
         .text-accent {
             color: var(--accent-color) !important;
         }
@@ -530,6 +559,7 @@
             background-color: var(--accent-color) !important;
         }
 
+        /* Dark Mode Toggle */
         .theme-toggle {
             width: 42px;
             height: 42px;
@@ -544,6 +574,12 @@
             transition: all 0.3s;
         }
 
+        .theme-toggle:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -567,6 +603,7 @@
             color: white;
         }
 
+        /* Trust Bar */
         .trust-bar img {
             filter: grayscale(100%);
             opacity: 0.5;
@@ -630,8 +667,8 @@
                         Devenez le Formateur que tout le monde <span class="text-accent">Écoute.</span>
                     </h1>
                     <p class="lead mb-5 text-light opacity-75">
-                        Ne soyez plus juste un expert technique. Apprenez à transmettre votre savoir et structurer des
-                        formations impactantes.
+                        Ne soyez plus juste un expert technique. Apprenez à transmettre votre savoir, captiver votre
+                        audience et structurer des formations impactantes avec Skills Formation.
                     </p>
                     <div class="d-flex align-items-center gap-3">
                         <div class="h3 fw-bold text-accent mb-0">4.9/5</div>
@@ -645,15 +682,16 @@
 
                         <form class="leadForm">
                             <div class="mb-3">
-                                <input type="text" class="form-control hero-input" placeholder="Votre Nom Complet"
-                                    required>
+                                <input type="text" name="nom" class="form-control hero-input"
+                                    placeholder="Votre Nom Complet" required>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control hero-input" placeholder="Email Professionnel"
-                                    required>
+                                <input type="email" name="email" class="form-control hero-input"
+                                    placeholder="Email Professionnel" required>
                             </div>
                             <div class="mb-3">
-                                <input type="tel" class="form-control hero-input" placeholder="Tél (WhatsApp)" required>
+                                <input type="tel" name="phone" class="form-control hero-input"
+                                    placeholder="Tél (WhatsApp)" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary-custom w-100 py-3 mt-1">
@@ -729,6 +767,77 @@
         </div>
     </section>
 
+    <section id="methodologie" class="py-5 bg-white-custom">
+        <div class="container py-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="video-wrapper">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Workshop" class="img-fluid w-100">
+                        <button class="play-btn">
+                            <i class="fas fa-play ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <h5 class="text-accent text-uppercase fw-bold">Notre Méthode</h5>
+                    <h2 class="fw-bold mb-4">La théorie c'est bien, <br>la <span class="text-accent">Pratique</span>
+                        c'est mieux.</h2>
+                    <p class="text-body mb-4">Notre approche "Learning by Doing" vous garantit une montée en compétence
+                        immédiate. Vous ne resterez pas assis à écouter, vous allez animer !</p>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 text-accent fs-4 me-3"><i class="fas fa-video"></i></div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Mises en situation filmées</h5>
+                            <p class="text-body small mb-0">Analysez votre posture et vos tics de langage grâce au
+                                feedback vidéo bienveillant.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 text-accent fs-4 me-3"><i class="fas fa-toolbox"></i></div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Boîte à outils complète</h5>
+                            <p class="text-body small mb-0">Repartez avec des modèles de supports, des checklists et des
+                                jeux pédagogiques prêts à l'emploi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-section">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Votre parcours vers la certification</h2>
+            </div>
+
+            <div class="row position-relative px-md-5">
+                <div class="timeline-line d-none d-md-block"></div>
+
+                <div class="col-md-4 step-item mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-circle">1</div>
+                    <h4 class="h5 fw-bold">Audit & Inscription</h4>
+                    <p class="small text-body px-4">Analyse de vos besoins et positionnement pédagogique.</p>
+                </div>
+
+                <div class="col-md-4 step-item mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-circle" style="color: var(--accent-color); border-color: var(--accent-color);">2
+                    </div>
+                    <h4 class="h5 fw-bold">2 Jours Intensifs</h4>
+                    <p class="small text-body px-4">Formation pratique, ateliers, feedback vidéo et coaching.</p>
+                </div>
+
+                <div class="col-md-4 step-item mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-circle" style="background: #22c55e; border-color: #22c55e; color: white;">3</div>
+                    <h4 class="h5 fw-bold">Certification</h4>
+                    <p class="small text-body px-4">Validation des acquis devant jury et remise du certificat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="programme" class="py-5 bg-white-custom">
         <div class="container py-lg-5">
             <div class="row">
@@ -780,6 +889,10 @@
                                             contraintes</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Formaliser les objectifs
                                             opérationnels</li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Choisir les modalités
+                                            organisationnelles</li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Définir le périmètre du
+                                            dispositif</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Valider la proposition avec le
                                             commanditaire</li>
                                     </ul>
@@ -801,6 +914,8 @@
                                             verbes d’action</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Prérequis et progression
                                             pédagogique</li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Critères de réussite et
+                                            indicateurs</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Alignement
                                             objectifs–évaluation</li>
                                     </ul>
@@ -822,6 +937,8 @@
                                             et rythmes</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Structurer synchrone et
                                             asynchrone</li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Accessibilité et
+                                            individualisation</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Planifier ressources et temps
                                         </li>
                                     </ul>
@@ -845,6 +962,8 @@
                                         </li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Prévoir transitions et timings
                                         </li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Préparer logistique et
+                                            supports</li>
                                     </ul>
                                 </div>
                             </div>
@@ -866,6 +985,8 @@
                                             actives</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Écrire des consignes
                                             mobilisantes</li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Outiller l’évaluation en cours
+                                            de formation</li>
                                     </ul>
                                 </div>
                             </div>
@@ -885,8 +1006,14 @@
                                             formateur</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Démarrer et cadrer le groupe
                                         </li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Conduire une séquence
+                                            interactive</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Gérer le temps et les
-                                            situations difficiles</li>
+                                            transitions</li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Traiter les situations
+                                            difficiles</li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Clôturer et ancrer les
+                                            apprentissages</li>
                                     </ul>
                                 </div>
                             </div>
@@ -908,6 +1035,8 @@
                                             ligne</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Maintenir rythme et attention
                                         </li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Co-animation et dépannage
+                                            rapide</li>
                                     </ul>
                                 </div>
                             </div>
@@ -927,6 +1056,8 @@
                                             d’évaluation</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Construire des outils de
                                             mesure</li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Exploiter les résultats et
+                                            remédier</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Amélioration continue et suivi
                                         </li>
                                     </ul>
@@ -946,13 +1077,162 @@
                                     <ul class="mb-0 list-unstyled">
                                         <li><i class="fas fa-check text-accent me-2"></i> Quiz global (toutes
                                             compétences)</li>
-                                        <li><i class="fas fa-check text-accent me-2"></i> Cas pratique global</li>
+                                        <li><i class="fas fa-check text-accent me-2"></i> Cas pratique global (toutes
+                                            compétences)</li>
                                         <li><i class="fas fa-check text-accent me-2"></i> Préparation aux épreuves</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formateur" class="py-5 bg-section">
+        <div class="container py-lg-5">
+            <div class="instructor-card">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="img-fluid w-100 h-100 object-fit-cover" alt="Dr Karim Alami"
+                            style="min-height: 400px;">
+                    </div>
+                    <div class="col-md-7 p-5">
+                        <span class="badge bg-accent mb-3">Formateur Principal</span>
+                        <h3 class="fw-bold mb-3">Dr. Karim Alami</h3>
+                        <p class="text-body mb-4">Expert en ingénierie de formation avec plus de 15 ans d'expérience.
+                            Ancien DRH de multinationales et coach certifié ICF. Il a formé plus de 2000 managers et
+                            experts au Maroc et en Afrique.</p>
+
+                        <div class="d-flex gap-5">
+                            <div>
+                                <h4 class="fw-bold mb-0">15+</h4>
+                                <small class="text-body opacity-75">Années Exp.</small>
+                            </div>
+                            <div>
+                                <h4 class="fw-bold mb-0">2k+</h4>
+                                <small class="text-body opacity-75">Alumni</small>
+                            </div>
+                            <div>
+                                <h4 class="fw-bold mb-0">ICF</h4>
+                                <small class="text-body opacity-75">Certifié</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white-custom">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Ce qu'ils en pensent</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-body fst-italic mb-4">"Une formation transformatrice. J'avais peur de parler en
+                            public, aujourd'hui je prends plaisir à animer mes réunions."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3"
+                                width="50" alt="User">
+                            <div>
+                                <h6 class="fw-bold mb-0">Sarah Benjelloun</h6>
+                                <small class="text-body opacity-75">RH Manager</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-body fst-italic mb-4">"Le côté pratique est incroyable. On sort de là avec des
+                            outils concrets qu'on peut utiliser dès le lendemain."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3"
+                                width="50" alt="User">
+                            <div>
+                                <h6 class="fw-bold mb-0">Ahmed Tazi</h6>
+                                <small class="text-body opacity-75">Ingénieur Chef de Projet</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-body fst-italic mb-4">"Excellent formateur, contenu riche et ambiance
+                            bienveillante. Je recommande à 100%."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3"
+                                width="50" alt="User">
+                            <div>
+                                <h6 class="fw-bold mb-0">Leila Kabbaj</h6>
+                                <small class="text-body opacity-75">Consultante</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-5 bg-section">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Questions Fréquentes</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    La formation est-elle finançable par l'OFPPT / CSF ?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Oui, notre organisme est agréé par l'État et nos formations
+                                    sont éligibles au remboursement dans le cadre des contrats spéciaux de formation
+                                    (CSF).</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Quels sont les prérequis pour s'inscrire ?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Aucun prérequis pédagogique n'est nécessaire. Cependant,
+                                    vous devez avoir une expertise dans votre domaine technique de base (métier) que
+                                    vous souhaitez transmettre.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    La formation est-elle disponible en ligne ?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Nous privilégions le présentiel à Casablanca pour maximiser
+                                    la pratique et les interactions. Des sessions "Classe Virtuelle" sont disponibles
+                                    sur demande pour les entreprises.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -988,7 +1268,7 @@
                     </div>
 
                     <div class="col-lg-6 p-5">
-                        <form id="leadForm" class="p-4 rounded-4 shadow-lg" style="background-color: var(--bg-card);">
+                        <form class="leadForm p-4 rounded-4 shadow-lg" style="background-color: var(--bg-card);">
                             <h4 class="fw-bold mb-4" style="color: var(--text-heading);">Pré-inscription</h4>
 
                             <div class="mb-3">
@@ -1042,7 +1322,7 @@
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="cgv.html" target="_blank"
                                 class="text-decoration-none text-white opacity-75">CGV</a></li>
-                        </ul>
+                    </ul>
                 </div>
             </div>
 
@@ -1082,22 +1362,45 @@
             if (savedTheme === 'dark') { icon.className = 'fas fa-sun'; }
         });
 
-        // Remplaci l script dyal form b hada:
-        const forms = document.querySelectorAll('.leadForm'); // Note: sta3melna class machi ID
+        // FORMULAIRE SUBMISSION TO ZAPIER (Correction appliquée sur le lien Zapier)
+        const forms = document.querySelectorAll('.leadForm');
 
         forms.forEach(form => {
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
+
                 const btn = this.querySelector('button');
                 const originalText = btn.innerHTML;
 
-                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
+                // Indiquer que l'envoi est en cours
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
                 btn.disabled = true;
 
-                // Simulation envoi
-                setTimeout(() => {
-                    window.location.href = "./thank-you.html";
-                }, 1000);
+                // Récupération des données du formulaire
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+
+                // Lien Webhook Zapier (Récupéré des screenshots)
+                const webhookURL = 'https://hooks.zapier.com/hooks/catch/19985308/uq8w4y3/';
+
+                fetch(webhookURL, {
+                    method: 'POST',
+                    mode: 'no-cors', // IMPORTANT: no-cors pour éviter les erreurs sur site statique avec Zapier
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then(() => {
+                        // Redirection vers la page de remerciement
+                        window.location.href = "./thank-you.html";
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert("Une erreur s'est produite. Veuillez réessayer.");
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    });
             });
         });
 
